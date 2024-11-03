@@ -23,16 +23,9 @@ struct Index {
 
   build() {
     Column({ space: 20}) {
-      Row({ space: 10}){
-        Button({ type: ButtonType.Circle, stateEffect: true }){
-          Image($r('app.media.chevron_left')).width(20).height(20)
-        }.width(45).height(45)
-        .backgroundColor('#D3D3D3')
-        Text(this.message)
-          .fontSize(40)
-          .fontWeight(FontWeight.Bolder)
-      }
-
+      Text(this.message)
+        .fontSize(40)
+        .fontWeight(FontWeight.Bolder)
       List({ space: 10, initialIndex: 0 }) {
         ForEach(this.notes, (item: note) => {
           ListItem() {
